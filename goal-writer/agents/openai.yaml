@@ -1,0 +1,5 @@
+interface:
+  display_name: "Goal Writer"
+  short_description: "Draft concise, evidence-based Codex Goals"
+  default_prompt: "Use $goal-writer to turn this vague objective into a concise, copy-ready Codex Goal:"
+
