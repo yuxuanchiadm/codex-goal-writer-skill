@@ -1,32 +1,46 @@
 <div align="center">
 
-# Codex Goal Writer Skill
+# 🎯 Codex Goal Writer Skill
 
-Turn vague objectives into concise, evidence-based Codex `/goal` prompts.
+### Turn fuzzy intentions into focused, evidence-driven Codex `/goal` prompts.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
-[![Codex Skill](https://img.shields.io/badge/Codex-Skill-blue.svg)](./goal-writer/SKILL.md)
-[![Goal Limit](https://img.shields.io/badge/Goal%20Limit-4000%20chars-orange.svg)](./goal-writer/scripts/count_goal_chars.py)
+<p>
+  <a href="./LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-2ea44f?style=for-the-badge"></a>
+  <a href="./goal-writer/SKILL.md"><img alt="Codex Skill" src="https://img.shields.io/badge/Codex-Skill-0969da?style=for-the-badge"></a>
+  <a href="./goal-writer/scripts/count_goal_chars.py"><img alt="Goal Limit" src="https://img.shields.io/badge/Goal%20Limit-4000%20chars-f97316?style=for-the-badge"></a>
+</p>
 
-[中文文档](./README.zh-CN.md) · [Quick Install](#quick-install) · [Usage](#usage) · [Examples](#examples)
+<p>
+  <b>Implicit drafting</b> · <b>One-question clarification</b> · <b>Evidence-based completion</b> · <b>4000-char safe</b>
+</p>
+
+<p>
+  <a href="./README.zh-CN.md">中文文档</a> ·
+  <a href="#-quick-install">Quick Install</a> ·
+  <a href="#-examples">Examples</a> ·
+  <a href="#-what-it-generates">Output</a>
+</p>
 
 </div>
 
-## Why
+---
 
-Codex Goals are useful for durable, multi-turn work: debugging, migrations, audits, research, refactors, and other tasks where success needs evidence instead of guesswork.
+## ✨ Why This Exists
 
-This skill helps Codex turn a rough objective into a compact `/goal` that defines:
+Codex Goals are great for work that should continue across turns: migrations, audits, benchmark investigations, refactors, research, product polish, and other tasks where "looks done" is not enough.
 
-- the desired outcome
-- the verification surface
-- constraints and boundaries
-- iteration behavior
-- the blocked stop condition
+But hand-written Goals often miss the pieces that make autonomous work reliable:
 
-It also keeps the final Goal within the goal-setting tool's 4000-character hard limit.
+| Common problem | What this skill adds |
+| --- | --- |
+| The objective is vague | Converts it into an observable outcome. |
+| Completion is subjective | Defines concrete verification evidence. |
+| Scope expands mid-task | Adds constraints and boundaries. |
+| Codex keeps asking too much | Asks only one material clarification question per turn. |
+| Goals get too long | Keeps the final Goal under the 4000-character hard limit. |
+| Research claims get muddy | Separates confirmed evidence, approximations, blockers, and uncertainty. |
 
-## Quick Install
+## 🚀 Quick Install
 
 Paste this into Codex:
 
@@ -34,35 +48,87 @@ Paste this into Codex:
 $skill-installer https://github.com/yuxuanchiadm/codex-goal-writer-skill/tree/main/goal-writer
 ```
 
-Restart Codex to pick up the new skill.
+Then restart Codex to pick up the new skill.
 
-## Features
+## 🧠 What It Optimizes For
 
-| Feature | What it does |
-| --- | --- |
-| Six-section Goal shape | Uses Outcome, Verification surface, Constraints, Boundaries, Iteration policy, and Blocked stop condition. |
-| Implicit drafting | Keeps draft Goals hidden during clarification and shows one copy-ready Goal at final handoff. |
-| Focused clarification | Asks at most one material question per turn. |
-| 4000-character safety | Targets concise Goals and includes a deterministic character-count helper. |
-| Evidence-based completion | Encourages concrete verification before marking work complete. |
-| Research/audit support | Labels confirmed findings, approximate support, blockers, and uncertainty. |
+<table>
+<tr>
+<td width="50%">
 
-## Usage
+### ✅ Strong Goals
 
-Ask Codex to use the skill when you have a rough objective:
+- Observable end state
+- Named verification surface
+- Clear constraints and boundaries
+- Iteration policy for multi-turn work
+- Specific blocked stop condition
+
+</td>
+<td width="50%">
+
+### 🛡️ Safer Agent Behavior
+
+- Drafts stay hidden until final handoff
+- No oversized Goals sent to the tool
+- No fake completion without evidence
+- Explicit uncertainty for research/audits
+- Narrow enough to audit, broad enough to explore
+
+</td>
+</tr>
+</table>
+
+## ⚡ Before / After
+
+**Before**
+
+```text
+Make this app better and fix any issues you find.
+```
+
+**After**
+
+```text
+/goal Improve the app until the main user flow is production-ready and verified.
+
+Outcome:
+- The main user flow works reliably on supported desktop and mobile viewports.
+- Obvious UI, console, and interaction defects found during inspection are fixed or documented.
+
+Verification surface:
+- Relevant tests, build output, browser checks, screenshots, or logs demonstrate the final state.
+
+Constraints:
+- Preserve existing product behavior unless a change is necessary and explained.
+- Keep changes focused on user-visible quality and correctness.
+
+Boundaries:
+- Do not introduce unrelated redesigns, dependencies, or architecture rewrites.
+
+Iteration policy:
+- Continue autonomously while evidence suggests clear next fixes; summarize changes and verification after each major pass.
+
+Blocked stop condition:
+- Stop and report blocked after the same required verification or dependency is unavailable for three consecutive attempts.
+```
+
+## 🧩 Usage
+
+Ask Codex to use the skill when your objective is still rough:
 
 ```text
 Use $goal-writer to turn this objective into a Codex Goal:
 Investigate why the benchmark regressed, fix it if safe, and report evidence if not.
 ```
 
-You can also ask Codex to set it immediately:
+Or ask it to set the Goal immediately:
 
 ```text
 Use $goal-writer to create and set an active Goal for migrating this project to the new API without breaking existing behavior.
 ```
 
-## Examples
+## 💡 Examples
 
 ```text
 Use $goal-writer to turn this into a Goal:
@@ -79,7 +145,9 @@ Use $goal-writer to turn this into a Goal:
 Research whether this benchmark result is reproducible and separate confirmed evidence from uncertainty.
 ```
 
-## What It Generates
+## 🧾 What It Generates
+
+The skill produces one copy-ready Goal with the standard Codex Goal contract:
 
 ```text
 /goal <one-sentence objective>
@@ -103,7 +171,17 @@ Blocked stop condition:
 - ...
 ```
 
-## Manual Install
+## 🔢 Character Limit Helper
+
+The included helper counts generated Goal text before it is sent to the goal-setting tool:
+
+```bash
+python goal-writer/scripts/count_goal_chars.py goal.txt
+```
+
+It is for generated Goal text, not for limiting `SKILL.md` itself.
+
+## 🛠️ Manual Install
 
 If you do not want to use `$skill-installer`, clone or download this repository and copy only this folder:
 
@@ -125,7 +203,7 @@ C:/Users/<your-name>/.codex/skills/goal-writer
 
 Restart Codex after installing.
 
-## Validation
+## ✅ Validation
 
 If you have the Codex `skill-creator` system skill installed:
 
@@ -133,13 +211,7 @@ If you have the Codex `skill-creator` system skill installed:
 python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py ~/.codex/skills/goal-writer
 ```
 
-The included helper counts generated Goal text, not `SKILL.md` itself:
-
-```bash
-python goal-writer/scripts/count_goal_chars.py goal.txt
-```
-
-## Repository Layout
+## 📦 Repository Layout
 
 ```text
 codex-goal-writer-skill/
@@ -154,10 +226,10 @@ codex-goal-writer-skill/
         └── count_goal_chars.py
 ```
 
-## Disclaimer
+## ⚠️ Disclaimer
 
 This is an unofficial community skill inspired by OpenAI's public Codex Goal guidance. It is not an official OpenAI release.
 
-## License
+## 📄 License
 
 MIT
