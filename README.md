@@ -7,6 +7,7 @@
 <p>
   <a href="./LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-2ea44f?style=for-the-badge"></a>
   <a href="./goal-writer/SKILL.md"><img alt="Codex Skill" src="https://img.shields.io/badge/Codex-Skill-0969da?style=for-the-badge"></a>
+  <a href="https://github.com/yuxuanchiadm/codex-goal-writer-skill/releases/tag/v0.1.0"><img alt="Version: v0.1.0" src="https://img.shields.io/badge/Version-v0.1.0-8b5cf6?style=for-the-badge"></a>
   <a href="./goal-writer/scripts/count_goal_chars.py"><img alt="Goal Limit" src="https://img.shields.io/badge/Goal%20Limit-4000%20chars-f97316?style=for-the-badge"></a>
 </p>
 
@@ -233,3 +234,4 @@ This is an unofficial community skill inspired by OpenAI's public Codex Goal gui
 ## 📄 License
 
 MIT
+
