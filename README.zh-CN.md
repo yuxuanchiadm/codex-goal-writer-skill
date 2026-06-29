@@ -17,7 +17,7 @@
 
 <p>
   <a href="./README.md">English</a> ·
-  <a href="#-快速安装">快速安装</a> ·
+  <a href="#-快速开始">快速开始</a> ·
   <a href="#-示例">示例</a> ·
   <a href="#-它会生成什么">输出格式</a>
 </p>
@@ -25,6 +25,37 @@
 </div>
 
 ---
+
+## 🚀 快速开始
+
+<table>
+<tr>
+<td width="50%">
+
+### 1. 安装
+
+复制下面这行发给 Codex：
+
+```text
+$skill-installer https://github.com/yuxuanchiadm/codex-goal-writer-skill/tree/main/goal-writer
+```
+
+安装后重启 Codex。
+
+</td>
+<td width="50%">
+
+### 2. 使用
+
+把 `$goal-writer` 放在请求最前面：
+
+```text
+$goal-writer Investigate why the benchmark regressed, fix it if safe, and report evidence if not.
+```
+
+</td>
+</tr>
+</table>
 
 ## ✨ 为什么需要它
 
@@ -40,16 +71,6 @@ Codex Goal 很适合需要持续推进的多轮任务：迁移、审计、benchm
 | Codex 问太多问题 | 每轮最多问一个真正关键的问题。 |
 | Goal 太长 | 控制在目标工具 4000 字符硬限制内。 |
 | 研究结论混乱 | 区分 confirmed、approximate support、blocked 和 uncertainty。 |
-
-## 🚀 快速安装
-
-复制下面这行发给 Codex：
-
-```text
-$skill-installer https://github.com/yuxuanchiadm/codex-goal-writer-skill/tree/main/goal-writer
-```
-
-安装后重启 Codex，让新 skill 生效。
 
 ## 🧠 它优化什么
 
@@ -116,34 +137,30 @@ Blocked stop condition:
 
 ## 🧩 使用方式
 
-当你的目标还比较粗略时，让 Codex 使用这个 skill：
+把 `$goal-writer` 放在请求最前面：
 
 ```text
-Use $goal-writer to turn this objective into a Codex Goal:
-Investigate why the benchmark regressed, fix it if safe, and report evidence if not.
+$goal-writer Investigate why the benchmark regressed, fix it if safe, and report evidence if not.
 ```
 
-也可以要求它直接设置为 active Goal：
+如果希望直接设置为 active Goal，也直接写在后面：
 
 ```text
-Use $goal-writer to create and set an active Goal for migrating this project to the new API without breaking existing behavior.
+$goal-writer Create and set an active Goal for migrating this project to the new API without breaking existing behavior.
 ```
 
 ## 💡 示例
 
 ```text
-Use $goal-writer to turn this into a Goal:
-Make this React dashboard production-quality on desktop and mobile.
+$goal-writer Make this React dashboard production-quality on desktop and mobile.
 ```
 
 ```text
-Use $goal-writer to turn this into a Goal:
-Audit this PR for behavioral regressions, missing tests, and risky assumptions.
+$goal-writer Audit this PR for behavioral regressions, missing tests, and risky assumptions.
 ```
 
 ```text
-Use $goal-writer to turn this into a Goal:
-Research whether this benchmark result is reproducible and separate confirmed evidence from uncertainty.
+$goal-writer Research whether this benchmark result is reproducible and separate confirmed evidence from uncertainty.
 ```
 
 ## 🧾 它会生成什么

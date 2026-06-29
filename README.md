@@ -17,7 +17,7 @@
 
 <p>
   <a href="./README.zh-CN.md">中文文档</a> ·
-  <a href="#-quick-install">Quick Install</a> ·
+  <a href="#-quick-start">Quick Start</a> ·
   <a href="#-examples">Examples</a> ·
   <a href="#-what-it-generates">Output</a>
 </p>
@@ -25,6 +25,37 @@
 </div>
 
 ---
+
+## 🚀 Quick Start
+
+<table>
+<tr>
+<td width="50%">
+
+### 1. Install
+
+Paste this into Codex:
+
+```text
+$skill-installer https://github.com/yuxuanchiadm/codex-goal-writer-skill/tree/main/goal-writer
+```
+
+Restart Codex after installation.
+
+</td>
+<td width="50%">
+
+### 2. Use
+
+Start a request with `$goal-writer`:
+
+```text
+$goal-writer Investigate why the benchmark regressed, fix it if safe, and report evidence if not.
+```
+
+</td>
+</tr>
+</table>
 
 ## ✨ Why This Exists
 
@@ -40,16 +71,6 @@ But hand-written Goals often miss the pieces that make autonomous work reliable:
 | Codex keeps asking too much | Asks only one material clarification question per turn. |
 | Goals get too long | Keeps the final Goal under the 4000-character hard limit. |
 | Research claims get muddy | Separates confirmed evidence, approximations, blockers, and uncertainty. |
-
-## 🚀 Quick Install
-
-Paste this into Codex:
-
-```text
-$skill-installer https://github.com/yuxuanchiadm/codex-goal-writer-skill/tree/main/goal-writer
-```
-
-Then restart Codex to pick up the new skill.
 
 ## 🧠 What It Optimizes For
 
@@ -116,34 +137,30 @@ Blocked stop condition:
 
 ## 🧩 Usage
 
-Ask Codex to use the skill when your objective is still rough:
+Put `$goal-writer` at the front of the request:
 
 ```text
-Use $goal-writer to turn this objective into a Codex Goal:
-Investigate why the benchmark regressed, fix it if safe, and report evidence if not.
+$goal-writer Investigate why the benchmark regressed, fix it if safe, and report evidence if not.
 ```
 
-Or ask it to set the Goal immediately:
+Ask it to set the Goal immediately when you want Codex to start under that Goal:
 
 ```text
-Use $goal-writer to create and set an active Goal for migrating this project to the new API without breaking existing behavior.
+$goal-writer Create and set an active Goal for migrating this project to the new API without breaking existing behavior.
 ```
 
 ## 💡 Examples
 
 ```text
-Use $goal-writer to turn this into a Goal:
-Make this React dashboard production-quality on desktop and mobile.
+$goal-writer Make this React dashboard production-quality on desktop and mobile.
 ```
 
 ```text
-Use $goal-writer to turn this into a Goal:
-Audit this PR for behavioral regressions, missing tests, and risky assumptions.
+$goal-writer Audit this PR for behavioral regressions, missing tests, and risky assumptions.
 ```
 
 ```text
-Use $goal-writer to turn this into a Goal:
-Research whether this benchmark result is reproducible and separate confirmed evidence from uncertainty.
+$goal-writer Research whether this benchmark result is reproducible and separate confirmed evidence from uncertainty.
 ```
 
 ## 🧾 What It Generates
