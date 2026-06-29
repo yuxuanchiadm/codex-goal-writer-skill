@@ -28,10 +28,6 @@
 
 ## 🚀 Quick Start
 
-<table>
-<tr>
-<td width="50%">
-
 ### 1. Install
 
 Paste this into Codex:
@@ -42,9 +38,6 @@ $skill-installer https://github.com/yuxuanchiadm/codex-goal-writer-skill/tree/ma
 
 Restart Codex after installation.
 
-</td>
-<td width="50%">
-
 ### 2. Use
 
 Start a request with `$goal-writer`:
@@ -52,10 +45,6 @@ Start a request with `$goal-writer`:
 ```text
 $goal-writer Investigate why the benchmark regressed, fix it if safe, and report evidence if not.
 ```
-
-</td>
-</tr>
-</table>
 
 ## ✨ Why This Exists
 

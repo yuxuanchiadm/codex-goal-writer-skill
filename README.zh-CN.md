@@ -28,10 +28,6 @@
 
 ## 🚀 快速开始
 
-<table>
-<tr>
-<td width="50%">
-
 ### 1. 安装
 
 复制下面这行发给 Codex：
@@ -42,9 +38,6 @@ $skill-installer https://github.com/yuxuanchiadm/codex-goal-writer-skill/tree/ma
 
 安装后重启 Codex。
 
-</td>
-<td width="50%">
-
 ### 2. 使用
 
 把 `$goal-writer` 放在请求最前面：
@@ -52,10 +45,6 @@ $skill-installer https://github.com/yuxuanchiadm/codex-goal-writer-skill/tree/ma
 ```text
 $goal-writer Investigate why the benchmark regressed, fix it if safe, and report evidence if not.
 ```
-
-</td>
-</tr>
-</table>
 
 ## ✨ 为什么需要它
 
